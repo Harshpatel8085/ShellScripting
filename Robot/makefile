@@ -1,1 +1,1 @@
-bash "$1.sh"
+sh Robot/$1.sh
