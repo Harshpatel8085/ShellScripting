@@ -1,7 +1,7 @@
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then
-    echo "You need to run script as a Root user or with Sudo permission"
-    
+    echo -e "\e[31m You need to run script as a Root user or with Sudo permission \e[0m"
+    exit 1
 fi
 
 yum install nginx -yum
