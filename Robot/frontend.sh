@@ -23,3 +23,21 @@ echo -n "starting nginx :"
 systemctl start nginx &>> /tmp/frontend.log
 stat
 
+echo -e -n "\e[33m Downloading the code zip file of frontend \e[0m"
+curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip" &>> /tmp/frontend.log
+stat
+
+echo -e -n "\e[33m clearing the default content \e[0m"
+cd /usr/share/nginx/html
+rm -rf * &>> /tmp/frontend.log
+stat
+echo -e -n "\e[33m Ectracting the code zip file of frontend \e[0m"
+unzip /tmp/frontend.zip &>> /tmp/frontend.log
+stat
+
+echo -e -n "\e[33m Copying the frontend \e[0m"
+mv frontend-main/*  &>> /tmp/frontend.log
+mv static/*  &>> /tmp/frontend.log
+rm -rf frontend-main README.md &>> tmp/frontend.log
+mv localhost.conf /etc/nginx/default.d/roboshop.conf &>> /tmp/frontend.log
+stat
