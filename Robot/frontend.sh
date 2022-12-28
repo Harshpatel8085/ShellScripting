@@ -41,3 +41,5 @@ mv static/*  &>> /tmp/frontend.log
 rm -rf frontend-main README.md &>> /tmp/frontend.log
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>> /tmp/frontend.log
 stat
+
+echo -e "\e[32m__________Frontend Configuration Completed__________\e[0m"
