@@ -4,7 +4,7 @@ if [ $ID -ne 0 ] ; then
     exit 1
 fi
 stat(){
-    if [ $1 -eq 0 ] ; then
+    if [ $? -eq 0 ] ; then
         echo -e  "\e[32m Success \e[0m"
     else
         echo -e  "\e[32m Failure \e[32m"
@@ -13,13 +13,13 @@ stat(){
 
 echo "Installing nginx"
 yum install nginx -y
-stat ?
+stat
 
 echo "Enabling nginx"
 systemctl enable nginx &>> /tmp/frontend.log
-stat ?
+stat
 
 echo -n "starting nginx"
 systemctl start nginx &>> /tmp/frontend.log
-stat ?
+stat
 
