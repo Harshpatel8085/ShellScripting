@@ -11,15 +11,15 @@ stat(){
     fi
 }
 
-echo "Installing nginx"
+echo -n "Installing nginx :"
 yum install nginx -y
 stat
 
-echo "Enabling nginx"
+echo -n "Enabling nginx :"
 systemctl enable nginx &>> /tmp/frontend.log
 stat
 
-echo -n "starting nginx"
+echo -n "starting nginx :"
 systemctl start nginx &>> /tmp/frontend.log
 stat
 
