@@ -38,6 +38,6 @@ stat
 echo -e -n "\e[33m Copying the frontend \e[0m"
 mv frontend-main/*  &>> /tmp/frontend.log
 mv static/*  &>> /tmp/frontend.log
-rm -rf frontend-main README.md &>> tmp/frontend.log
+rm -rf frontend-main README.md &>> /tmp/frontend.log
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>> /tmp/frontend.log
 stat
