@@ -1,3 +1,8 @@
+ID= $(id -u)
+if ["$id -ne 0"]; then
+    echo "You need to run script as a Root user or with Sudo permission"
+fi
+
 yum install nginx -yum
 systemctl enable nginx
 systemctl start nginx
