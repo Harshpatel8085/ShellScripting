@@ -12,7 +12,7 @@ stat(){
 }
 
 echo -n "Installing nginx :"
-yum install nginx -y &>> tmp/frontend.log
+yum install nginx -y &>> /tmp/frontend.log
 stat
 
 echo -n "Enabling nginx :"
