@@ -6,17 +6,17 @@ fi
 
 stat(){
     if [ $1 -eq 0 ] ; then
-        echo -e -n "\e[32m Success \e[0m"
+        echo -e  "\e[32m Success \e[0m"
     else
-        echo -e -n "\e[32m Failure \e[32m"
+        echo -e  "\e[32m Failure \e[32m"
     fi
 }
 
-echo -n "Installing nginx"
+echo "Installing nginx"
 yum install nginx -y
 stat ?
 
-echo -n "Enabling nginx"
+echo "Enabling nginx"
 systemctl enable nginx
 stat ?
 
