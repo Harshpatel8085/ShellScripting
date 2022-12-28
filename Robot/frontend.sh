@@ -42,4 +42,9 @@ rm -rf frontend-main README.md &>> /tmp/frontend.log
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>> /tmp/frontend.log
 stat
 
+echo -e -n "\e[33m Restarting Nginx\e[0m"
+systemctl enable nginx &>> /tmp/frontend.log
+systemctl restart nginx &>> /tmp/frontend.log
+stat
+
 echo -e "\e[32m__________Frontend Configuration Completed__________\e[0m"
