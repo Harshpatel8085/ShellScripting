@@ -1,1 +1,1 @@
-sh Robot/$1.sh
+sh cart.sh
