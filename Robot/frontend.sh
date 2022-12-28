@@ -9,6 +9,7 @@ stat(){
         echo -e -n "\e[32m Success \e[0m"
     else
         echo -e -n "\e[32m Failure \e[32m"
+    fi
 }
 
 echo -n "Installing nginx"
