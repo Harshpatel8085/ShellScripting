@@ -1,1 +1,1 @@
-sh cart.sh
+sh $1.sh
